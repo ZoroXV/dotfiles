@@ -29,19 +29,10 @@ export EDITOR=vim
 #curl wttr.in/paris?0
 
 alias grep='grep --color -n'
-
-alias gl='clear && git log --graph --oneline'
-alias gs='clear && git status'
-alias gnb='git shortlog -sn --all'
 alias gauto='/home/epita/misc-tools/auto-git.sh'
-
 alias ls='ls --color'
 alias lsa='clear && ls -a -lh --color'
 
-#PS1='[\u@\h \W]\$ '
+alias valgrind-full='valgrind --leak-check=full --show-leak-kinds=all --leak-resolution=high --track-origins=yes --vgdb=yes'
 
-#PS1='[\[$(tput sgr0)\]\[\033[38;5;1m\]\t\[$(tput sgr0)\]\[\033[38;5;15m\]]\[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]\\> \[$(tput sgr0)\]'
-
-#PS1="[\[$(tput sgr0)\]\[\033[38;5;160m\]\t\[$(tput sgr0)\]\[\033[38;5;15m\]]\[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;5m\]\\$\W\[$(tput sgr0)\]\[\033[38;5;15m\]\\>\[$(tput sgr0)\]"
-
-PS1="[\[$(tput sgr0)\]\[\033[38;5;160m\]\t\[$(tput sgr0)\]]\[$(tput sgr0)\]\[\033[38;5;2m\]\u\[$(tput sgr0)\] \[$(tput sgr0)\]\[\033[38;5;5m\]\W\[$(tput sgr0)\]\\$\n[\$?] \[$(tput sgr0)\]"
+source ~/.bash-powerline-ng.sh
