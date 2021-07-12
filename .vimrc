@@ -12,8 +12,17 @@ Plugin 'VundleVim/Vundle.vim'
 " https://github.com/tpope/vim-sensible
 Plugin 'tpope/vim-sensible'
 
+" https://github.com/iRyukizo/tiger-syntax
+Plugin 'iryukizo/tiger-syntax'
+
 " https://github.com/ycm-core/YouCompleteMe
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
+
+" https://github.com/itchyny/lightline.vim
+Plugin 'itchyny/lightline.vim'
+
+" https://github.com/tyrannicaltoucan/vim-deep-space
+Plugin 'tyrannicaltoucan/vim-deep-space'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -21,14 +30,20 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
-runtime! plugin/sensible.vim
+" runtime! plugin/sensible.vim
 
 set encoding=utf-8 fileencodings=
 
 syntax on
 
 " Custom Color scheme
-colo space-vim-dark
+set background=dark
+set termguicolors
+colorscheme deep-space
+
+let g:lightline = {
+      \ 'colorscheme': 'deepspace',
+      \ }
 
 set number
 set cc=80
@@ -41,8 +56,8 @@ set mouse=a
 set autoindent
 set expandtab
 set shiftround
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 set hlsearch
 set ignorecase

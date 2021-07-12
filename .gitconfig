@@ -1,0 +1,59 @@
+[core]
+    excludesfile = ~/.gitignore
+
+[color]
+    ui = true
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+
+[commit]
+    verbose = true
+
+[pull]
+    rebase = true
+
+[branch]
+    autosetuprebase = always
+
+[push]
+    default = simple
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+
+[sendemail]
+    smtpencryption = tls
+    smtpserver = smtp.office365.com
+    smtpserverport = 587
+    smtpuser = firstname.lastname@epita.fr
+
+[user]
+    name = Victor LE CORRE
+    email = victor.le-corre@epita.fr
+
+[alias]
+    c = commit
+    s = status
+    co = checkout
+    cob = checkout -b
+    b = branch
+    f = fetch
+    pl = pull
+    ph = push
+    l = log --oneline --graph
+    ll = log --graph
+    ls = log --stat
+    lp = log -p
+    nb = shortlog -sn
+    rb = rebase
+    m = merge
+    r = remote
+
+[merge]
+    tool = fugitive
+
+[mergetool "fugitive"]
+    cmd = vim -f -c "Gvdiffsplit!" "$MERGED"
