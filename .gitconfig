@@ -1,59 +1,64 @@
 [core]
-    excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 
 [color]
-    ui = true
-    branch = auto
-    diff = auto
-    interactive = auto
-    status = auto
+  ui = true
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
 
 [commit]
-    verbose = true
+  verbose = true
 
 [pull]
-    rebase = true
+  rebase = true
 
 [branch]
-    autosetuprebase = always
+  autosetuprebase = always
 
 [push]
-    default = simple
+  default = simple
+  autoSetupRemote = true
 
 [rebase]
-    autoSquash = true
-    autoStash = true
+  autoSquash = true
+  autoStash = true
 
 [sendemail]
-    smtpencryption = tls
-    smtpserver = smtp.office365.com
-    smtpserverport = 587
-    smtpuser = firstname.lastname@epita.fr
+  smtpencryption = tls
+  smtpserver = smtp.office365.com
+  smtpserverport = 587
+  smtpuser = firstname.lastname@epita.fr
 
 [user]
-    name = Victor LE CORRE
-    email = victor.le-corre@epita.fr
+  name = Victor LE CORRE
+  email = victor.le-corre@epita.fr
+  signingkey = 38DAD0D0155258B0
 
 [alias]
-    c = commit
-    s = status
-    co = checkout
-    cob = checkout -b
-    b = branch
-    f = fetch
-    pl = pull
-    ph = push
-    l = log --oneline --graph
-    ll = log --graph
-    ls = log --stat
-    lp = log -p
-    nb = shortlog -sn
-    rb = rebase
-    m = merge
-    r = remote
+  c = commit
+  s = status
+  co = checkout
+  cob = checkout -b
+  b = branch
+  f = fetch
+  pl = pull
+  ph = push
+  l = log --oneline --graph
+  ll = log --graph
+  ls = log --stat
+  lp = log -p
+  nb = shortlog -sn
+  rb = rebase
+  m = merge
+  r = remote
 
 [merge]
-    tool = fugitive
+  tool = fugitive
 
 [mergetool "fugitive"]
-    cmd = vim -f -c "Gvdiffsplit!" "$MERGED"
+  cmd = vim -f -c "Gvdiffsplit!" "$MERGED"
+
+[init]
+  defaultBranch = master

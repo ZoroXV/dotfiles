@@ -24,6 +24,9 @@ Plugin 'itchyny/lightline.vim'
 " https://github.com/tyrannicaltoucan/vim-deep-space
 Plugin 'tyrannicaltoucan/vim-deep-space'
 
+" https://github.com/isobit/vim-caddyfile
+Bundle 'isobit/vim-caddyfile'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -56,8 +59,8 @@ set mouse=a
 set autoindent
 set expandtab
 set shiftround
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 
 set hlsearch
 set ignorecase
@@ -68,7 +71,9 @@ set smartcase
 autocmd Filetype make setlocal noexpandtab
 autocmd Filetype txt setlocal noexpandtab
 
-set list listchars=tab:»·,trail:·
+set list listchars=tab:»·,trail:·,eol:¬
+
+"inoremap <expr> <Tab> ( col('.') == 1 \|\| getline('.')[: col('.') - 2] =~ '^\s*$' ) ? "\<Tab>" : repeat(' ', shiftwidth() - (virtcol('.') % shiftwidth()) + 1)
 
 
 " per .git vim configs
@@ -78,3 +83,4 @@ let git_settings = system("git config --get vim.settings")
 if strlen(git_settings)
 	exe "set" git_settings
 endif
+

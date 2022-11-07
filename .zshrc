@@ -25,9 +25,8 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 neofetch
 
 alias grep='grep --color -n'
-alias ls='ls --color'
+alias ls='ls -a --color'
+alias ll='ls -a -l --color'
 
 alias valgrind-full='valgrind --leak-check=full --show-leak-kinds=all --leak-resolution=high --vgdb=yes --track-fds=yes'
-
-alias fabriquer='make'
-alias editer='vim'
+alias ..='cd ..'
